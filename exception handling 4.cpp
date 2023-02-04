@@ -16,14 +16,15 @@ int main()
     cout<<"Enter the email address: ";
     // cin.getline(str,30);
     getline(cin,name);
+    int len=name.length()
     int i;
-      for(i=0;i!='\0';i++)
+      for(i=0;name[i]!='\0';i++)
       {
           if(name[i]==64)
            break;
       }
       try{
-          if(i=='\0')
+          if(i==len)
           throw "plz insert the @ symbol in your email address";
       }
        catch(const char *p)
